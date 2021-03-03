@@ -1,0 +1,19 @@
+{
+  "name": "@flox/time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/im4LF/flox-time.git"
+  },
+  "author": "im4LF <him4LF@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/im4LF/flox-time/issues"
+  },
+  "homepage": "https://github.com/im4LF/flox-time#readme"
+}
