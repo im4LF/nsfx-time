@@ -1,6 +1,6 @@
 {
   "name": "@xfx/time",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/im4LF/flox-time/issues"
   },
-  "homepage": "https://github.com/im4LF/flox-time#readme"
+  "homepage": "https://github.com/im4LF/flox-time#readme",
+  "devDependencies": {
+    "mocha": "^8.3.1"
+  }
 }

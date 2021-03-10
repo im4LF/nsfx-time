@@ -11,7 +11,7 @@ module.exports = (args, env) => ({
         let current = new Date(message[this.props.in][0])
         let stop = new Date(message[this.props.in][1])
         let step = message[this.props.in][2] || 1
-
+        
         env.logger.debug({ current, stop }, this.name)
         
         while (current <= stop) {
