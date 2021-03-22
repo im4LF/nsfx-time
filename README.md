@@ -12,7 +12,7 @@
 ```js
 const def = `
 # get new token every day
-ticks(@xfx/time/Ticks, {"interval": 86400000}) -> GET token(Tokens)
+ticks(@nsfx/time/Ticks, {"interval": 86400000}) -> GET token(Tokens)
 `
 
 build(def, {}, { logger, nodesdir: __dirname }, (err, flow) => {
@@ -25,7 +25,7 @@ build(def, {}, { logger, nodesdir: __dirname }, (err, flow) => {
 
 ```js
 const def = `
-timeout(@xfx/time/Timeout, {"timeout": 1000}) -> execute(./Dummy)
+timeout(@nsfx/time/Timeout, {"timeout": 1000}) -> execute(./Dummy)
 `
 
 build(def, {}, { logger, nodesdir: __dirname }, (err, flow) => {
@@ -39,7 +39,7 @@ build(def, {}, { logger, nodesdir: __dirname }, (err, flow) => {
 ```js
 const def = `
 # generate array of dates between start, stop by step from daterange key from message
-dates(@xfx/time/Daterange) -> GET_BY_DATE request(./Dummy) -> NEXT dates
+dates(@nsfx/time/Daterange) -> GET_BY_DATE request(./Dummy) -> NEXT dates
 
 request EMPTY -> NEXT dates
 `
