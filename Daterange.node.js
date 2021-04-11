@@ -2,18 +2,21 @@
 
 module.exports = (args, env) => ({
     props: {
-        in: { default: 'daterange' },
-        out: { default: 'date' }
+        out: { default: 'date' },
+        start: { default: Date.now() },
+        stop: { default: Date.now() },
+        step: { default: 1 }
     },
     _in(message, done) {
 
-        this.__items = []
-        let current = new Date(message[this.props.in][0])
-        let stop = new Date(message[this.props.in][1])
-        let step = message[this.props.in][2] || 1
-        
+        let start = typeof this.props.start === 'function' ? this.props.start(message) : this.props.start
+        let stop = typeof this.props.stop === 'function' ? this.props.stop(message) : this.props.stop
+        let step = typeof this.props.step === 'function' ? this.props.step(message) : this.props.step
+
+        let current = new Date(start)
         env.logger.debug({ current, stop }, this.name)
         
+        this.__items = []
         while (current <= stop) {
             this.__items.push(new Date(current))
             current = new Date(current.setDate(current.getDate() + step))

@@ -44,8 +44,16 @@ dates(@nsfx/time/Daterange) -> GET_BY_DATE request(./Dummy) -> NEXT dates
 request EMPTY -> NEXT dates
 `
 
-build(def, {}, { logger, nodesdir: __dirname }, (err, flow) => {
+const data = {
+    dates: {
+        start: '2021-01-01',
+        stop: _ => Date.now(),
+        step: 5
+    }
+}
 
-    flow.dates.in.write({ daterange: ['2021-01-01', '2021-01-10', 2] })
+build(def, data, { logger, nodesdir: __dirname }, (err, flow) => {
+
+    flow.dates.in.write({})
 })
 ```
