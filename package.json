@@ -1,6 +1,6 @@
 {
   "name": "@nsfx/time",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/im4LF/flox-time.git"
+    "url": "git+https://github.com/im4LF/nsfx-time.git"
   },
   "author": "im4LF <him4LF@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/im4LF/flox-time/issues"
+    "url": "https://github.com/im4LF/nsfx-time/issues"
   },
-  "homepage": "https://github.com/im4LF/flox-time#readme",
+  "homepage": "https://github.com/im4LF/nsfx-time#readme",
   "devDependencies": {
     "mocha": "^8.3.1"
   }
