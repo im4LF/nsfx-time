@@ -13,6 +13,12 @@ module.exports = (args, env) => ({
         let stop = typeof this.props.stop === 'function' ? this.props.stop(message) : this.props.stop
         let step = typeof this.props.step === 'function' ? this.props.step(message) : this.props.step
 
+        if (start && !(start instanceof Date)) start = new Date(start)
+        if (stop && !(stop instanceof Date)) stop = new Date(stop)
+
+        start.setHours(0,0,0,0)
+        stop.setHours(0,0,0,0)
+
         let current = new Date(start)
         env.logger.debug({ current, stop }, this.name)
         
