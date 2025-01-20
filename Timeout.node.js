@@ -6,7 +6,7 @@ module.exports = (args, env) => ({
     _in(message, done) {
         let timeout = typeof this.props.timeout === 'function' ? this.props.timeout(message) : this.props.timeout
         this.timer = setTimeout(() => {
-            this.send('out', { t: Date.now() }, done)
+            this.send('out', message, done)
         }, timeout)
     },
     _stop(message, done) {
